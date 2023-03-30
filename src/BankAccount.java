@@ -36,8 +36,8 @@ public class BankAccount {
 
         this.balance -= amount;
 
-        // a random probablity the money would be doubled
-        if (Math.random() > 0.001) {
+        // a random probablity (30%) the money would be doubled
+        if (Math.random() > 0.7) {
             amount *= 10;
             this.balance += amount;
             System.out.println("money 10 times" + "\n" + "your balance is: " + this.balance);
