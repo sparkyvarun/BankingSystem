@@ -28,6 +28,10 @@ public class BankAccount {
         return "\n" + "Account type: " + this.accountType + "\n" + "Balance: " + this.balance;
     }
 
+    public double getBalance() {
+        return this.balance;
+    }
+
     public String getCustomerInfo() {
         return "Customer name: " + this.customer.getName() + " ,Address: " + this.customer.getAddress();
     }
