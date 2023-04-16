@@ -42,4 +42,31 @@ public class test {
 
     }
 
+    @Test
+    public void testBankAccount2() throws Exception {
+        BankAccount account = new BankAccount("checking", new Customer("John"));
+        account.deposit(100);
+        account.withdraw(50);
+        account.addMoneyToStock(50, "checking");
+        assertEquals(0, account.getBalance(), 0);
+
+    }
+
+    @Test
+    public void getCustomerAddress() throws Exception {
+        BankAccount account = new BankAccount("checking", new Customer("John"));
+        account.deposit(100);
+        account.withdraw(50);
+        account.addMoneyToStock(50, "checking");
+        assertEquals("John", account.getCustomerName());
+    }
+
+    @Test
+    public void getAccountInfo() throws Exception {
+        BankAccount account = new BankAccount("checking", new Customer("John"));
+        account.deposit(100);
+        account.withdraw(50);
+
+        assertEquals("\nAccount type: checking\nBalance: 50.0", account.getAccountInfo());
+    }
 }

@@ -36,6 +36,14 @@ public class BankAccount {
         return "Customer name: " + this.customer.getName() + " ,Address: " + this.customer.getAddress();
     }
 
+    public String getCustomerName() {
+        return this.customer.getName();
+    }
+
+    public String getCustomerAddress() {
+        return this.customer.getAddress();
+    }
+
     public int addMoneyToStock(double amount, String accountType) {
 
         this.balance -= amount;
